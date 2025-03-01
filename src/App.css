@@ -1,0 +1,352 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Custom styles for MoneyTracker */
+
+/* General styles */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode styles */
+[data-bs-theme="dark"] {
+  --bs-body-bg: #121212;
+  --bs-body-color: #e0e0e0;
+  --bs-border-color: #2d2d2d;
+  --bs-card-bg: #1e1e1e;
+  --bs-card-cap-bg: #252525;
+  --bs-secondary-color: #adb5bd;
+}
+
+[data-bs-theme="dark"] .bg-light {
+  background-color: #1a1a1a !important;
+}
+
+[data-bs-theme="dark"] .bg-white {
+  background-color: #1e1e1e !important;
+}
+
+[data-bs-theme="dark"] .text-muted {
+  color: #adb5bd !important;
+}
+
+[data-bs-theme="dark"] .border-top {
+  border-color: #2d2d2d !important;
+}
+
+[data-bs-theme="dark"] .table-light {
+  --bs-table-bg: #252525;
+  --bs-table-color: #e0e0e0;
+}
+
+[data-bs-theme="dark"] .badge.bg-light {
+  background-color: #2d2d2d !important;
+  color: #e0e0e0 !important;
+}
+
+/* Card styles */
+.card {
+  border-radius: 0.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 1.5rem;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Button styles */
+.btn {
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color, #4CAF50);
+  border-color: var(--primary-color, #4CAF50);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: var(--primary-dark, #388E3C);
+  border-color: var(--primary-dark, #388E3C);
+}
+
+.btn-outline-primary {
+  color: var(--primary-color, #4CAF50);
+  border-color: var(--primary-color, #4CAF50);
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+  background-color: var(--primary-color, #4CAF50);
+  border-color: var(--primary-color, #4CAF50);
+}
+
+/* Navbar styles */
+.navbar-dark.bg-primary {
+  background-color: var(--primary-color, #4CAF50) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styles */
+.form-control:focus, .form-select:focus {
+  border-color: var(--primary-color, #4CAF50);
+  box-shadow: 0 0 0 0.25rem rgba(76, 175, 80, 0.25);
+}
+
+/* Table styles */
+.table {
+  vertical-align: middle;
+}
+
+.table th {
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+[data-bs-theme="dark"] .table th {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Badge styles */
+.badge {
+  font-weight: 500;
+  padding: 0.35em 0.65em;
+}
+
+/* Progress bar styles */
+.progress {
+  height: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-bs-theme="dark"] .progress {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Animation keyframes */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .card {
+    padding: 1.5em;
+  }
+  
+  .table-responsive {
+    border-radius: 0.5rem;
+  }
+}
+
+/* Color Theme Options */
+.color-theme-option {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.color-theme-option:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.color-theme-option.active {
+  box-shadow: 0 0 0 3px #fff, 0 0 0 5px currentColor;
+}
+
+/* Theme-specific colors */
+.theme-default {
+  --primary-color: #4CAF50;
+  --primary-light: #81C784;
+  --primary-dark: #388E3C;
+  --accent-color: #FF5722;
+}
+
+.theme-blue {
+  --primary-color: #2196F3;
+  --primary-light: #64B5F6;
+  --primary-dark: #1976D2;
+  --accent-color: #FF9800;
+}
+
+.theme-purple {
+  --primary-color: #9C27B0;
+  --primary-light: #BA68C8;
+  --primary-dark: #7B1FA2;
+  --accent-color: #FFEB3B;
+}
+
+.theme-orange {
+  --primary-color: #FF9800;
+  --primary-light: #FFB74D;
+  --primary-dark: #F57C00;
+  --accent-color: #2196F3;
+}
+
+.theme-teal {
+  --primary-color: #009688;
+  --primary-light: #4DB6AC;
+  --primary-dark: #00796B;
+  --accent-color: #FF5722;
+}
+
+/* Transaction color coding */
+.transaction-row {
+  transition: background-color 0.2s ease;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.transaction-row:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+[data-bs-theme="dark"] .transaction-row:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.transaction-row.income {
+  border-left: 4px solid var(--primary-color, #4CAF50);
+}
+
+.transaction-row.expense {
+  border-left: 4px solid #F44336;
+}
+
+/* Category color coding */
+.category-food { color: #FF5722; }
+.category-transportation { color: #2196F3; }
+.category-housing { color: #9C27B0; }
+.category-utilities { color: #607D8B; }
+.category-entertainment { color: #FF9800; }
+.category-shopping { color: #E91E63; }
+.category-healthcare { color: #00BCD4; }
+.category-education { color: #3F51B5; }
+.category-personal { color: #795548; }
+.category-travel { color: #009688; }
+.category-debt { color: #F44336; }
+.category-other { color: #9E9E9E; }
+.category-income { color: var(--primary-color, #4CAF50); }
+.category-salary { color: #43A047; }
+.category-freelance { color: #7CB342; }
+.category-investment { color: #C0CA33; }
+.category-gift { color: #FFA000; }
+
+/* Animation for new elements */
+.new-item-animation {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Responsive improvements */
+@media (max-width: 576px) {
+  #root {
+    padding: 1rem;
+  }
+  
+  .card {
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .btn {
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* Transaction details styles */
+.transaction-details td {
+  padding-top: 0 !important;
+  background-color: transparent !important;
+}
+
+.transaction-details .bg-light {
+  border-top: none;
+  margin-top: -5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.3s ease-out;
+}
+
+[data-bs-theme="dark"] .transaction-details .bg-light {
+  background-color: #252525 !important;
+}
+
+[data-bs-theme="dark"] .transaction-details .bg-white {
+  background-color: #333 !important;
+}
+
+.text-monospace {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.875rem;
+}

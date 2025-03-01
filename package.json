@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "homepage": "https://your-username.github.io/financetracker/"
+
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
